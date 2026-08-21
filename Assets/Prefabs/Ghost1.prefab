@@ -178,4 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
   question1: Hat?
   question2: Eyes?
-  question3: Body
+  question3: Size?
+  answer1: yes
+  answer2: no
+  answer3: maybe
