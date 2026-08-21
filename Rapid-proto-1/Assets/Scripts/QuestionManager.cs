@@ -40,9 +40,9 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 0;
 
-        Debug.Log("Kysymys 1: " + currentNPC.question1);
-        Debug.Log("Kysymys 2: " + currentNPC.question2);
-        Debug.Log("Kysymys 3: " + currentNPC.question3);
+        //Debug.Log("Kysymys 1: " + currentNPC.question1);
+        //Debug.Log("Kysymys 2: " + currentNPC.question2);
+        //Debug.Log("Kysymys 3: " + currentNPC.question3);
 
         // Asetetaan tekstit nappeihin
         SetButtonText(answerButton1, currentNPC.question1);
@@ -99,6 +99,7 @@ public class QuestionManager : MonoBehaviour
     public void Answer3()
     {
         selectedAnswer = 3;
+        Debug.Log("Kysymys 3: " + currentNPC.question3);
     }
 
     public void Guess()

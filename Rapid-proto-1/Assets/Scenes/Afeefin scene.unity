@@ -391,8 +391,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 401360033}
         m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 3
+        m_MethodName: Answer3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -905,8 +905,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 401360033}
         m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 3
+        m_MethodName: Answer2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2013,8 +2013,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 401360033}
         m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
-        m_MethodName: Answer
-        m_Mode: 3
+        m_MethodName: Answer1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
