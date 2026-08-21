@@ -16,7 +16,7 @@ public class QuestionManager : MonoBehaviour
     public GameObject rejectButton;
 
     private NPCQuestion currentNPC;
-    private int selectedAnswer = 0;
+    private int selectedAnswer = 0; 
 
     private void Start()
     {
@@ -40,7 +40,6 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 0;
 
-        Debug.Log("Uusi NPC: " + npc.name);
         Debug.Log("Kysymys 1: " + currentNPC.question1);
         Debug.Log("Kysymys 2: " + currentNPC.question2);
         Debug.Log("Kysymys 3: " + currentNPC.question3);
@@ -88,11 +87,13 @@ public class QuestionManager : MonoBehaviour
     public void Answer1()
     {
         selectedAnswer = 1;
+        Debug.Log("Kysymys 1: " + currentNPC.question1);
     }
 
     public void Answer2()
     {
         selectedAnswer = 2;
+        Debug.Log("Kysymys 2: " + currentNPC.question2);
     }
 
     public void Answer3()
