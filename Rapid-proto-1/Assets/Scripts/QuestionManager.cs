@@ -30,22 +30,17 @@ public class QuestionManager : MonoBehaviour
 
         if (currentNPC == null)
         {
-            Debug.LogError(
-                "NPC:ltä " + npc.name +
-                " puuttuu NPCQuestion!"
-            );
-
+            Debug.LogError("NPC:ltä puuttuu NPCQuestion!");
             return;
         }
 
         selectedAnswer = 0;
 
-        // Asetetaan kysymykset nappeihin
+        // Näytetään kysymykset
         SetButtonText(answerButton1, currentNPC.question1);
         SetButtonText(answerButton2, currentNPC.question2);
         SetButtonText(answerButton3, currentNPC.question3);
 
-        // Näytä kysymysnapit
         answerButton1.SetActive(true);
         answerButton2.SetActive(true);
         answerButton3.SetActive(true);
@@ -58,28 +53,16 @@ public class QuestionManager : MonoBehaviour
 
     private void SetButtonText(GameObject buttonObject, string text)
     {
-        if (buttonObject == null)
-        {
-            Debug.LogError("Question Button puuttuu!");
-            return;
-        }
-
         TMP_Text textComponent =
             buttonObject.GetComponentInChildren<TMP_Text>(true);
 
-        if (textComponent == null)
+        if (textComponent != null)
         {
-            Debug.LogError(
-                "Buttonista " + buttonObject.name +
-                " ei löytynyt TMP_Text-komponenttia!"
-            );
-
-            return;
+            textComponent.text = text;
         }
-
-        textComponent.text = text;
     }
 
+    // Kysymys 1
     public void Answer1()
     {
         if (currentNPC == null)
@@ -87,10 +70,14 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 1;
 
-        Debug.Log("KYSYMYS: " + currentNPC.question1);
-        Debug.Log("VASTAUS: " + currentNPC.answer1);
+        // Kysymys vaihtuu vastaukseksi
+        SetButtonText(answerButton1, currentNPC.answer1);
+
+        Debug.Log("Kysymys: " + currentNPC.question1);
+        Debug.Log("Vastaus: " + currentNPC.answer1);
     }
 
+    // Kysymys 2
     public void Answer2()
     {
         if (currentNPC == null)
@@ -98,10 +85,14 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 2;
 
-        Debug.Log("KYSYMYS: " + currentNPC.question2);
-        Debug.Log("VASTAUS: " + currentNPC.answer2);
+        // Kysymys vaihtuu vastaukseksi
+        SetButtonText(answerButton2, currentNPC.answer2);
+
+        Debug.Log("Kysymys: " + currentNPC.question2);
+        Debug.Log("Vastaus: " + currentNPC.answer2);
     }
 
+    // Kysymys 3
     public void Answer3()
     {
         if (currentNPC == null)
@@ -109,8 +100,11 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 3;
 
-        Debug.Log("KYSYMYS: " + currentNPC.question3);
-        Debug.Log("VASTAUS: " + currentNPC.answer3);
+        // Kysymys vaihtuu vastaukseksi
+        SetButtonText(answerButton3, currentNPC.answer3);
+
+        Debug.Log("Kysymys: " + currentNPC.question3);
+        Debug.Log("Vastaus: " + currentNPC.answer3);
     }
 
     public void Guess()
@@ -120,10 +114,10 @@ public class QuestionManager : MonoBehaviour
         answerButton2.SetActive(false);
         answerButton3.SetActive(false);
 
-        // ARVAA pois
+        // Arvaa pois
         guessButton.SetActive(false);
 
-        // PASS ja REJECT näkyviin
+        // Pass ja Reject näkyviin
         passButton.SetActive(true);
         rejectButton.SetActive(true);
 
@@ -151,7 +145,6 @@ public class QuestionManager : MonoBehaviour
         passButton.SetActive(false);
         rejectButton.SetActive(false);
 
-        // Napit näkyviin
         answerButton1.SetActive(true);
         answerButton2.SetActive(true);
         answerButton3.SetActive(true);

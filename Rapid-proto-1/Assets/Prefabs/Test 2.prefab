@@ -45,5 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
   question1: "Miss\xE4 k\xE4si"
+  answer1: "Olen t\xE4m\xE4n kyl\xE4n vartija."
   question2: sun peili
-  question3: "sun ik\xE4?"
+  answer2: ieee
+  question3: oeee
+  answer3: leeee
