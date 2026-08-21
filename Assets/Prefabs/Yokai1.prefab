@@ -22,39 +22,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.79955
+      value: -15.894333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3839405
+      value: -2.3839395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.02266
+      value: 22.602663
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -84,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8234056671933894136}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7504132344072587086}
   m_SourcePrefab: {fileID: 100100000, guid: a7319a6921fbea146b6441a8457aa0b8, type: 3}
 --- !u!1 &2952330397261662049 stripped
 GameObject:
@@ -202,3 +205,28 @@ MonoBehaviour:
   question1: Looks
   question2: Eyes
   question3: Lure
+  answer1: "Olen t\xE4m\xE4n kyl\xE4n vartija."
+  answer2: "Kyl\xE4ss\xE4 on tapahtunut jotain outoa."
+  answer3: Totta kai voin auttaa.
+--- !u!95 &7504132344072587086
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952330397261662049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0cb725edbe004e04eb14288d2d8256d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
