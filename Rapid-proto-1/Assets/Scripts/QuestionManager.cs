@@ -16,7 +16,7 @@ public class QuestionManager : MonoBehaviour
     public GameObject rejectButton;
 
     private NPCQuestion currentNPC;
-    private int selectedAnswer = 0; 
+    private int selectedAnswer = 0;
 
     private void Start()
     {
@@ -40,8 +40,7 @@ public class QuestionManager : MonoBehaviour
 
         selectedAnswer = 0;
 
-
-        // Asetetaan tekstit nappeihin
+        // Asetetaan kysymykset nappeihin
         SetButtonText(answerButton1, currentNPC.question1);
         SetButtonText(answerButton2, currentNPC.question2);
         SetButtonText(answerButton3, currentNPC.question3);
@@ -83,20 +82,35 @@ public class QuestionManager : MonoBehaviour
 
     public void Answer1()
     {
+        if (currentNPC == null)
+            return;
+
         selectedAnswer = 1;
-        Debug.Log("Kysymys 1: " + currentNPC.question1);
+
+        Debug.Log("KYSYMYS: " + currentNPC.question1);
+        Debug.Log("VASTAUS: " + currentNPC.answer1);
     }
 
     public void Answer2()
     {
+        if (currentNPC == null)
+            return;
+
         selectedAnswer = 2;
-        Debug.Log("Kysymys 2: " + currentNPC.question2);
+
+        Debug.Log("KYSYMYS: " + currentNPC.question2);
+        Debug.Log("VASTAUS: " + currentNPC.answer2);
     }
 
     public void Answer3()
     {
+        if (currentNPC == null)
+            return;
+
         selectedAnswer = 3;
-        Debug.Log("Kysymys 3: " + currentNPC.question3);
+
+        Debug.Log("KYSYMYS: " + currentNPC.question3);
+        Debug.Log("VASTAUS: " + currentNPC.answer3);
     }
 
     public void Guess()
@@ -136,7 +150,8 @@ public class QuestionManager : MonoBehaviour
     {
         passButton.SetActive(false);
         rejectButton.SetActive(false);
-        // napit näkyviin
+
+        // Napit näkyviin
         answerButton1.SetActive(true);
         answerButton2.SetActive(true);
         answerButton3.SetActive(true);
