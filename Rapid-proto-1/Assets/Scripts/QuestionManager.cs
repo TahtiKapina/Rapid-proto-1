@@ -137,6 +137,12 @@ public class QuestionManager : MonoBehaviour
     {
         passButton.SetActive(false);
         rejectButton.SetActive(false);
+        // napit näkyviin
+        answerButton1.SetActive(true);
+        answerButton2.SetActive(true);
+        answerButton3.SetActive(true);
+
+        guessButton.SetActive(true);
 
         if (currentNPC != null)
         {
