@@ -67,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bf23709b2db505a4fb6377f378e47d0d, type: 3}
       insertIndex: -1
       addedObject: {fileID: -5570459163294687990}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bf23709b2db505a4fb6377f378e47d0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6604761808747533974}
   m_SourcePrefab: {fileID: 100100000, guid: bf23709b2db505a4fb6377f378e47d0d, type: 3}
 --- !u!1 &6403777047136123596 stripped
 GameObject:
@@ -121,3 +124,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-6604761808747533974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403777047136123596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f7527abb33066469d474a32b6d48dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
+  question1: Robot
+  question2: Eye
+  question3: Weapons
