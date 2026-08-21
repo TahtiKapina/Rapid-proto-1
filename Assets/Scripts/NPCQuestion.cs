@@ -12,8 +12,17 @@ public class NPCQuestion : MonoBehaviour
 
     [TextArea(2, 5)]
     public string question3 = "Voitko auttaa minua?";
+    [Header("Vastaukset")]
+
+    [TextArea(2, 5)]
+    public string answer1 = "Olen tämän kylän vartija.";
+
+    [TextArea(2, 5)]
+    public string answer2 = "Kylässä on tapahtunut jotain outoa.";
 
 
+    [TextArea(2, 5)]
+    public string answer3 = "Totta kai voin auttaa.";
 
     private void Start()
     {
@@ -23,10 +32,6 @@ public class NPCQuestion : MonoBehaviour
         if (questionManager != null)
         {
             questionManager.SetNPC(gameObject);
-        }
-        else
-        {
-            Debug.LogError("QuestionManageria ei löytynyt scenestä!");
         }
     }
 }
