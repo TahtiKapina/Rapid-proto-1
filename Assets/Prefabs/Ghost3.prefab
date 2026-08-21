@@ -85,6 +85,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9145eab3491f1e3438fe72936ef541be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7817476881244814568}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9145eab3491f1e3438fe72936ef541be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6193799850845766339}
   m_SourcePrefab: {fileID: 100100000, guid: 9145eab3491f1e3438fe72936ef541be, type: 3}
 --- !u!1 &5784206808052554788 stripped
 GameObject:
@@ -188,3 +191,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-6193799850845766339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784206808052554788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f7527abb33066469d474a32b6d48dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
+  question1: Size?
+  question2: Face?
+  question3: Shadow?

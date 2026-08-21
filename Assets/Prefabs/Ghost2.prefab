@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3349828667869575825}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1094963508160029425}
   m_SourcePrefab: {fileID: 100100000, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
 --- !u!1 &7717755888764162736 stripped
 GameObject:
@@ -136,3 +139,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-1094963508160029425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717755888764162736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f7527abb33066469d474a32b6d48dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
+  question1: Skin?
+  question2: Size?
+  question3: Floating?
