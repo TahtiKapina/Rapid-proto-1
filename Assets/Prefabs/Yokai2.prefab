@@ -104,6 +104,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 276ead94c7415da4992875c35113ebb1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5699721550082422506}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 276ead94c7415da4992875c35113ebb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4705809708866135151}
   m_SourcePrefab: {fileID: 100100000, guid: 276ead94c7415da4992875c35113ebb1, type: 3}
 --- !u!1 &7466337628590411381 stripped
 GameObject:
@@ -225,3 +228,20 @@ MonoBehaviour:
   answer1: . . .
   answer2: . . .
   answer3: . . .
+--- !u!114 &-4705809708866135151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466337628590411381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469f00bef68774644a884fb680f2f62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostData
+  isRobot: 1
+  isHumanoid: 1
+  hasRedEyes: 1
+  isFloating: 1
+  speaksOnlyWhenNeeded: 1

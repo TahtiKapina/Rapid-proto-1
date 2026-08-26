@@ -18,6 +18,9 @@ public class QuestionManager : MonoBehaviour
     private NPCQuestion currentNPC;
     private int selectedAnswer = 0;
 
+    public Score scoreManager;
+    private GhostData yokai;
+
     private void Start()
     {
         passButton.SetActive(false);
@@ -129,6 +132,10 @@ public class QuestionManager : MonoBehaviour
         if (currentNPC == null)
             return;
 
+        GhostData yokaiData = currentNPC.GetComponent<GhostData>();
+        if (yokaiData.IsYokai())
+            scoreManager.addScore();
+
         FinishNPC();
     }
 
@@ -136,6 +143,10 @@ public class QuestionManager : MonoBehaviour
     {
         if (currentNPC == null)
             return;
+
+        GhostData yokaiData = currentNPC.GetComponent<GhostData>();
+        if (!yokaiData.IsYokai())
+            scoreManager.addScore();
 
         FinishNPC();
     }
