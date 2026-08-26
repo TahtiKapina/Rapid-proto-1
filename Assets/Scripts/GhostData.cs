@@ -17,6 +17,8 @@ public class GhostData : MonoBehaviour
 
         if (hasRedEyes) return true;
 
+        if (speaksOnlyWhenNeeded) return true;  
+
         return false;
     }
 }

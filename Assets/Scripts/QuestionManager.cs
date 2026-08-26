@@ -129,6 +129,8 @@ public class QuestionManager : MonoBehaviour
         if (currentNPC == null)
             return;
 
+        CheckYokaiStatus(playerPassed: true);
+
         FinishNPC();
     }
 
@@ -137,7 +139,46 @@ public class QuestionManager : MonoBehaviour
         if (currentNPC == null)
             return;
 
+        CheckYokaiStatus(playerPassed: false);
+
         FinishNPC();
+    }
+
+    private void CheckYokaiStatus(bool playerPassed)
+    {
+        GhostData data = currentNPC.GetComponent<GhostData>();
+
+        if (data != null)
+        {
+            bool isYokai = data.IsYokai();
+
+            if (playerPassed)
+            {
+                if (isYokai)
+                {
+                    Debug.Log("V‰‰rin! P‰‰stit Yokain l‰pi!");
+                }
+                else
+                {
+                    Debug.Log("Oikein! P‰‰stit tavallisen kummituksen l‰pi.");
+                }
+            }
+            else // player chose Reject
+            {
+                if (isYokai)
+                {
+                    Debug.Log("Oikein! Hylk‰sit Yokain.");
+                }
+                else
+                {
+                    Debug.Log("V‰‰rin! Hylk‰sit tavallisen kummituksen!");
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("NPC:lt‰ puuttuu GhostData-skripti!");
+        }
     }
 
     private void FinishNPC()

@@ -88,6 +88,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6698111763302269825}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6782432448591982914}
   m_SourcePrefab: {fileID: 100100000, guid: fa3a436b50727e54dbe0c4b8eabb5c33, type: 3}
 --- !u!1 &7717755888764162736 stripped
 GameObject:
@@ -182,3 +185,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6782432448591982914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717755888764162736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469f00bef68774644a884fb680f2f62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostData
+  isRobot: 0
+  isHumanoid: 0
+  hasRedEyes: 0
+  isFloating: 1
+  speaksOnlyWhenNeeded: 0
