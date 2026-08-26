@@ -15,6 +15,10 @@ public class QuestionManager : MonoBehaviour
     public GameObject passButton;
     public GameObject rejectButton;
 
+    [Header("Audio")]
+    public AudioClip correctSound;
+    [Range(0f, 1f)] public float soundVolume = 0.3f;
+
     private NPCQuestion currentNPC;
     private int selectedAnswer = 0;
 
@@ -151,6 +155,8 @@ public class QuestionManager : MonoBehaviour
                 else
                 {
                     Debug.Log("Oikein! Päästit tavallisen kummituksen läpi.");
+                    // soittaa ääniefektin
+                    AudioSource.PlayClipAtPoint(correctSound, Camera.main.transform.position);
                 }
             }
             else // player chose Reject
@@ -158,6 +164,7 @@ public class QuestionManager : MonoBehaviour
                 if (isYokai)
                 {
                     Debug.Log("Oikein! Hylkäsit Yokain.");
+                    AudioSource.PlayClipAtPoint(correctSound, Camera.main.transform.position);
                 }
                 else
                 {
