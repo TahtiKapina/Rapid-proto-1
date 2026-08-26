@@ -142,9 +142,9 @@ MonoBehaviour:
   question1: Robot
   question2: Eye
   question3: Weapons
-  answer1: "Olen t\xE4m\xE4n kyl\xE4n vartija."
-  answer2: "Kyl\xE4ss\xE4 on tapahtunut jotain outoa."
-  answer3: Totta kai voin auttaa.
+  answer1: Exterminate!
+  answer2: You need to be exterminated!
+  answer3: Exterminate Exterminate EXTERMINATEE!
 --- !u!95 &5893730172848368839
 Animator:
   serializedVersion: 7

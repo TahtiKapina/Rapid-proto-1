@@ -205,9 +205,9 @@ MonoBehaviour:
   question1: Looks
   question2: Eyes
   question3: Lure
-  answer1: "Olen t\xE4m\xE4n kyl\xE4n vartija."
-  answer2: "Kyl\xE4ss\xE4 on tapahtunut jotain outoa."
-  answer3: Totta kai voin auttaa.
+  answer1: . . .
+  answer2: . . .
+  answer3: Hunt
 --- !u!95 &7504132344072587086
 Animator:
   serializedVersion: 7

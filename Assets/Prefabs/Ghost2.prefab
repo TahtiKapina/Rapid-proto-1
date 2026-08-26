@@ -157,9 +157,9 @@ MonoBehaviour:
   question1: Skin?
   question2: Size?
   question3: Floating?
-  answer1: "Olen t\xE4m\xE4n kyl\xE4n vartija."
-  answer2: "Kyl\xE4ss\xE4 on tapahtunut jotain outoa."
-  answer3: Totta kai voin auttaa.
+  answer1: I am made of pure gold
+  answer2: I am a very large yes
+  answer3: I adont have legs as you can see
 --- !u!95 &6698111763302269825
 Animator:
   serializedVersion: 7
