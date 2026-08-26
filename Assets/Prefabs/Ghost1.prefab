@@ -176,9 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f7527abb33066469d474a32b6d48dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCQuestion
-  question1: Hat?
-  question2: Eyes?
-  question3: Size?
-  answer1: yes
-  answer2: no
-  answer3: maybe
+  question1: Do you speak?
+  question2: Hat?
+  question3: What are you?
+  answer1: Ja, aber nur Deutsch
+  answer2: "Ja, ja, es ist gro\xDF und m\xE4chtig"
+  answer3: Ich bin ein Kampfzwerg
