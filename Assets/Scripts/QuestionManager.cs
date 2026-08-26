@@ -19,7 +19,6 @@ public class QuestionManager : MonoBehaviour
     private int selectedAnswer = 0;
 
     public Score scoreManager;
-    private GhostData yokai;
 
     private void Start()
     {
@@ -33,13 +32,12 @@ public class QuestionManager : MonoBehaviour
 
         if (currentNPC == null)
         {
-            Debug.LogError("NPC:lt� puuttuu NPCQuestion!");
+            Debug.LogError("NPC:ltä puuttuu NPCQuestion!");
             return;
         }
 
         selectedAnswer = 0;
 
-        // N�ytet��n kysymykset
         SetButtonText(answerButton1, currentNPC.question1);
         SetButtonText(answerButton2, currentNPC.question2);
         SetButtonText(answerButton3, currentNPC.question3);
@@ -65,45 +63,36 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    // Kysymys 1
     public void Answer1()
     {
         if (currentNPC == null)
             return;
 
         selectedAnswer = 1;
-
-        // Kysymys vaihtuu vastaukseksi
         SetButtonText(answerButton1, currentNPC.answer1);
 
         Debug.Log("Kysymys: " + currentNPC.question1);
         Debug.Log("Vastaus: " + currentNPC.answer1);
     }
 
-    // Kysymys 2
     public void Answer2()
     {
         if (currentNPC == null)
             return;
 
         selectedAnswer = 2;
-
-        // Kysymys vaihtuu vastaukseksi
         SetButtonText(answerButton2, currentNPC.answer2);
 
         Debug.Log("Kysymys: " + currentNPC.question2);
         Debug.Log("Vastaus: " + currentNPC.answer2);
     }
 
-    // Kysymys 3
     public void Answer3()
     {
         if (currentNPC == null)
             return;
 
         selectedAnswer = 3;
-
-        // Kysymys vaihtuu vastaukseksi
         SetButtonText(answerButton3, currentNPC.answer3);
 
         Debug.Log("Kysymys: " + currentNPC.question3);
@@ -112,15 +101,12 @@ public class QuestionManager : MonoBehaviour
 
     public void Guess()
     {
-        // Kysymysnapit pois
         answerButton1.SetActive(false);
         answerButton2.SetActive(false);
         answerButton3.SetActive(false);
 
-        // Arvaa pois
         guessButton.SetActive(false);
 
-        // Pass ja Reject n�kyviin
         passButton.SetActive(true);
         rejectButton.SetActive(true);
 
@@ -159,28 +145,30 @@ public class QuestionManager : MonoBehaviour
             {
                 if (isYokai)
                 {
-                    Debug.Log("V��rin! P��stit Yokain l�pi!");
+                    Debug.Log("Väärin! Päästit Yokain läpi!");
+                    scoreManager.addScore();
                 }
                 else
                 {
-                    Debug.Log("Oikein! P��stit tavallisen kummituksen l�pi.");
+                    Debug.Log("Oikein! Päästit tavallisen kummituksen läpi.");
                 }
             }
             else // player chose Reject
             {
                 if (isYokai)
                 {
-                    Debug.Log("Oikein! Hylk�sit Yokain.");
+                    Debug.Log("Oikein! Hylkäsit Yokain.");
                 }
                 else
                 {
-                    Debug.Log("V��rin! Hylk�sit tavallisen kummituksen!");
+                    Debug.Log("Väärin! Hylkäsit tavallisen kummituksen!");
+                    scoreManager.addScore();
                 }
             }
         }
         else
         {
-            Debug.LogWarning("NPC:lt� puuttuu GhostData-skripti!");
+            Debug.LogWarning("NPC:ltä puuttuu GhostData-skripti!");
         }
     }
 
