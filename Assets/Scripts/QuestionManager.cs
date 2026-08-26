@@ -33,13 +33,13 @@ public class QuestionManager : MonoBehaviour
 
         if (currentNPC == null)
         {
-            Debug.LogError("NPC:ltä puuttuu NPCQuestion!");
+            Debug.LogError("NPC:ltï¿½ puuttuu NPCQuestion!");
             return;
         }
 
         selectedAnswer = 0;
 
-        // Näytetään kysymykset
+        // Nï¿½ytetï¿½ï¿½n kysymykset
         SetButtonText(answerButton1, currentNPC.question1);
         SetButtonText(answerButton2, currentNPC.question2);
         SetButtonText(answerButton3, currentNPC.question3);
@@ -120,7 +120,7 @@ public class QuestionManager : MonoBehaviour
         // Arvaa pois
         guessButton.SetActive(false);
 
-        // Pass ja Reject näkyviin
+        // Pass ja Reject nï¿½kyviin
         passButton.SetActive(true);
         rejectButton.SetActive(true);
 
@@ -132,9 +132,7 @@ public class QuestionManager : MonoBehaviour
         if (currentNPC == null)
             return;
 
-        GhostData yokaiData = currentNPC.GetComponent<GhostData>();
-        if (yokaiData.IsYokai())
-            scoreManager.addScore();
+        CheckYokaiStatus(playerPassed: true);
 
         FinishNPC();
     }
@@ -144,11 +142,46 @@ public class QuestionManager : MonoBehaviour
         if (currentNPC == null)
             return;
 
-        GhostData yokaiData = currentNPC.GetComponent<GhostData>();
-        if (!yokaiData.IsYokai())
-            scoreManager.addScore();
+        CheckYokaiStatus(playerPassed: false);
 
         FinishNPC();
+    }
+
+    private void CheckYokaiStatus(bool playerPassed)
+    {
+        GhostData data = currentNPC.GetComponent<GhostData>();
+
+        if (data != null)
+        {
+            bool isYokai = data.IsYokai();
+
+            if (playerPassed)
+            {
+                if (isYokai)
+                {
+                    Debug.Log("Vï¿½ï¿½rin! Pï¿½ï¿½stit Yokain lï¿½pi!");
+                }
+                else
+                {
+                    Debug.Log("Oikein! Pï¿½ï¿½stit tavallisen kummituksen lï¿½pi.");
+                }
+            }
+            else // player chose Reject
+            {
+                if (isYokai)
+                {
+                    Debug.Log("Oikein! Hylkï¿½sit Yokain.");
+                }
+                else
+                {
+                    Debug.Log("Vï¿½ï¿½rin! Hylkï¿½sit tavallisen kummituksen!");
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("NPC:ltï¿½ puuttuu GhostData-skripti!");
+        }
     }
 
     private void FinishNPC()
