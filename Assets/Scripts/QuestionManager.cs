@@ -15,10 +15,17 @@ public class QuestionManager : MonoBehaviour
     public GameObject passButton;
     public GameObject rejectButton;
 
+    [Header("Audio")]
+    public AudioClip correctSound;
+    public AudioClip incorrectSound;
+    [Range(0f, 1f)] public float soundVolume = 0.3f;
+
     private NPCQuestion currentNPC;
     private int selectedAnswer = 0;
 
     public Score scoreManager;
+
+
 
     private void Start()
     {
@@ -146,11 +153,14 @@ public class QuestionManager : MonoBehaviour
                 if (isYokai)
                 {
                     Debug.Log("Väärin! Päästit Yokain läpi!");
+                    AudioSource.PlayClipAtPoint(incorrectSound, Camera.main.transform.position, soundVolume);
                     scoreManager.addScore();
                 }
                 else
                 {
                     Debug.Log("Oikein! Päästit tavallisen kummituksen läpi.");
+                    // soittaa ääniefektin
+                    AudioSource.PlayClipAtPoint(correctSound, Camera.main.transform.position, soundVolume);
                 }
             }
             else // player chose Reject
@@ -158,10 +168,12 @@ public class QuestionManager : MonoBehaviour
                 if (isYokai)
                 {
                     Debug.Log("Oikein! Hylkäsit Yokain.");
+                    AudioSource.PlayClipAtPoint(correctSound, Camera.main.transform.position, soundVolume);
                 }
                 else
                 {
                     Debug.Log("Väärin! Hylkäsit tavallisen kummituksen!");
+                    AudioSource.PlayClipAtPoint(incorrectSound, Camera.main.transform.position, soundVolume);
                     scoreManager.addScore();
                 }
             }
