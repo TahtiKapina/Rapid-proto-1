@@ -1716,6 +1716,9 @@ MonoBehaviour:
   guessButton: {fileID: 372715096}
   passButton: {fileID: 1899831592}
   rejectButton: {fileID: 2128635927}
+  correctSound: {fileID: 8300000, guid: 59a7d4d28b9bb284b9d4276321696d3c, type: 3}
+  incorrectSound: {fileID: 8300000, guid: 213c674039785ac4a9ac692a436b0294, type: 3}
+  soundVolume: 0.3
   scoreManager: {fileID: 189436851}
 --- !u!4 &1611410066
 Transform:
